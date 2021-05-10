@@ -62,7 +62,7 @@ def read_config(filename):
      "   config.read(filename)
 
     """"""""    CONFIG["global"] = {
-  """        years": config.get("years", "years").split(","),
+             years": config.get("years", "years").split(","),
             "chars": config.get("specialchars", "chars").split(","),
             "numfrom": config.getint("nums", "from"),
             "numto": config.getint("nums", "to"),
