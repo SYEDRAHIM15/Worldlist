@@ -50,19 +50,19 @@ CONFIG = {}
 
 
 def read_config(filename):
-    """Read the given configuration file and update global variables to reflect
-    changes (CONFIG)."""
+ """"Read the given configuration file and update global variables to reflect
+   " changes (CONFIG)
 
-    if os.path.isfile(filename):
+ "   if os.path.isfile(filename):
 
         # global CONFIG
 
         # Reading configuration file
-        config = configparser.ConfigParser()
-        config.read(filename)
+   "     config = configparser.ConfigParser()
+     "   config.read(filename)
 
-        CONFIG["global"] = {
-            "years": config.get("years", "years").split(","),
+    """"""""    CONFIG["global"] = {
+  """        years": config.get("years", "years").split(","),
             "chars": config.get("specialchars", "chars").split(","),
             "numfrom": config.getint("nums", "from"),
             "numto": config.getint("nums", "to"),
