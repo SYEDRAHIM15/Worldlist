@@ -50,7 +50,7 @@ CONFIG = {}
 
 
 def read_config(filename):
- """"Read the given configuration file and update global variables to reflect
+      Read the given configuration file and update global variables to reflect
    " changes (CONFIG)
 
  "   if os.path.isfile(filename):
