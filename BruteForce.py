@@ -171,7 +171,7 @@ def print_cow():
 
 
 def version():
-    """Display version"""
+    Display version
 
     print("\r\n	\033[1;31m[ cupp.py ]  " + __version__ + "\033[1;m\r\n")
     print("	* Hacked up by j0rgan - j0rgan@remote-exploit.org")
@@ -180,8 +180,8 @@ def version():
 
 
 def improve_dictionary(file_to_open):
-    """Implementation of the -w option. Improve a dictionary by
-    interactively questioning the user."""
+    Implementation of the -w option. Improve a dictionary by
+    interactively questioning the user.
 
     kombinacija = {}
     komb_unique = {}
@@ -302,8 +302,8 @@ def improve_dictionary(file_to_open):
 
 
 def interactive():
-    """Implementation of the -i switch. Interactively question the user and
-    create a password dictionary file based on the answer."""
+    Implementation of the -i switch. Interactively question the user and
+    create a password dictionary file based on the answer.
 
     print("\r\n[+] Insert the information about the victim to make a dictionary")
     print("[+] If you don't know all the info, just hit enter when asked! ;)\r\n")
@@ -374,8 +374,8 @@ def interactive():
 
 
 def generate_wordlist_from_profile(profile):
-    """ Generates a wordlist from a given profile """
-
+     Generates a wordlist from a given profile
+""""""
     chars = CONFIG["global"]["chars"]
     years = CONFIG["global"]["years"]
     numfrom = CONFIG["global"]["numfrom"]
@@ -718,8 +718,8 @@ def download_http(url, targetfile):
 
 
 def alectodb_download():
-    """Download csv from alectodb and save into local file as a list of
-    usernames and passwords"""
+    Download csv from alectodb and save into local file as a list of
+    usernames and passwords
 
     url = CONFIG["global"]["alectourl"]
 
@@ -758,8 +758,8 @@ def alectodb_download():
 
 
 def download_wordlist():
-    """Implementation of -l switch. Download wordlists from http repository as
-    defined in the configuration file."""
+    Implementation of -l switch. Download wordlists from http repository as
+    defined in the configuration file.
 
     print("	\r\n	Choose the section you want to download:\r\n")
 
@@ -801,7 +801,7 @@ def download_wordlist():
 
 
 def download_wordlist_http(filedown):
-    """ do the HTTP download of a wordlist """
+     do the HTTP download of a wordlist 
 
     mkdir_if_not_exists("dictionaries")
 
@@ -1023,7 +1023,7 @@ def mkdir_if_not_exists(dire):
 
 # the main function
 def main():
-    """Command-line interface to the cupp utility"""
+    Command-line interface to the cupp utility
 
     read_config(os.path.join(os.path.dirname(os.path.realpath(__file__)), "cupp.cfg"))
 
@@ -1049,8 +1049,8 @@ def main():
 
 # Separate into a function for testing purposes
 def get_parser():
-    """Create and return a parser (argparse.ArgumentParser instance) for main()
-    to use"""
+    Create and return a parser (argparse.ArgumentParser instance) for main()
+    to use
     parser = argparse.ArgumentParser(description="Common User Passwords Profiler")
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument(
